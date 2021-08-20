@@ -4,19 +4,22 @@ d3.json("samples.json").then((data)=> {
         console.log(data);
     data.names.forEach(element=> {
         dropdown.append("option").text(element).property("value",element)
-    });
-        // create_charts(data.names[0])
+    });        
 });
 
 // function to create charts
 function create_charts(choose_data){
     d3.json("samples.json").then((data)=> {
-        user_choice = data.samples.filter(sample=> sample.id == choose_data)
-        user_choice = user_choice[0]    
-        console.log(user_choice)
+      user_choice = data.samples.filter(sample=> sample.id == choose_data)
+      user_choice = user_choice[0]
+      meta_choice = data.metadata.filter(meta_sample=> meta_sample.id == choose_data)    
+      meta_choice = meta_choice[0]
+      console.log(user_choice)
+      console.log(meta_choice)
     
     // basic horizontal bar chart; reverse makes largest value appear at top of graph
-    var hbar_data = [{
+    var hbar_data = [
+      {
         type: 'bar',
         x: user_choice.sample_values.slice(0,10).reverse(), 
         y: user_choice.otu_ids.map(el => "OTU " + el).slice(0,10).reverse(),
@@ -26,8 +29,8 @@ function create_charts(choose_data){
     ];    
     var barlayout={
         title: (`Top Ten OTUs for ID ${user_choice.id}`)
-      }
-    Plotly.newPlot('bar', hbar_data, barlayout)
+      };
+    Plotly.newPlot('bar', hbar_data, barlayout);
     
     //bubble chart
     var bubble_data = [
@@ -44,12 +47,46 @@ function create_charts(choose_data){
       }
     ];
     var bubble_layout={
-      title: (`All OTUs for ID ${user_choice.id}`)
-    }
+        title: (`All OTUs for ID ${user_choice.id}`)
+    };
     Plotly.newPlot("bubble", bubble_data, bubble_layout)
+
+    // demographics table 
+    var demo_data = [
+      {
+        type: "table",
+        // header: {
+        //   values: [["Key"], ["Value"]],
+        //   align: "center",
+        //   line: {width: 1, color: 'black'},
+        // },
+        cells: {
+          meta_choice
+        }
+      }
+    ]
+    Plotly.newPlot("sample-metadata", demo_data)
+
+
+    // (user_choice.metadata.id)
+    // //     console.log(demographics);
+    //     user_choice = data.samples.filter(sample=> sample.id == choose_data)
+    //   user_choice = user_choice[0]    
+    //   console.log(user_choice)
   })
+
 }
 
+
+
+    // var table_data = [
+    //   {type: "table",
+    // //   header: {d3.keys(user_choice.metadata[0])}
+
+      // }
+    // ]
+
+  
 
 
 
@@ -58,5 +95,4 @@ function create_charts(choose_data){
 function optionChanged(choose_data){
   console.log(choose_data)
   create_charts(choose_data)
-
 }
