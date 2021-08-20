@@ -52,21 +52,31 @@ function create_charts(choose_data){
     Plotly.newPlot("bubble", bubble_data, bubble_layout)
 
     // demographics table 
-    // var demo_data = [
-    //   {
-    //     type: "table",
-    //     // header: {
-    //     //   values: [["Key"], ["Value"]],
-    //     //   align: "center",
-    //     //   line: {width: 1, color: 'black'},
-    //     // },
-    //     cells: {
-    //       meta_choice[0]
-    //     }
-    //   }
-    // ];
+    var values = [
+      ['id', 'ethnicity', 'gender', 'age', 'location', 'bbtype', 'washfreq'],
+      [meta_choice.id, meta_choice.ethnicity, meta_choice.gender, meta_choice.age, 
+        meta_choice.location, meta_choice.bbtype, meta_choice.wfreq]
+    ]
+    var demog_data = [
+      {
+        type: "table",
+        // header: {
+        //     values: ["Key", "Value"],
+        //     align: "center",
+        //     line: {width: 1, color: 'black'},
+        //     fill: {color: "lightblue"},
+        //     font: {family: "Ariel", size: 12, color: "black"}
+        //   },
+        cells: {
+          values: values,
+          align: "center",
+          line: {color: "black", width: 1}
+          }
+        
+      }
+    ];
 
-    // Plotly.newPlot("sample-metadata", demo_data)
+    Plotly.newPlot("sample-metadata", demog_data)
 
 
     // (user_choice.metadata.id)
@@ -82,7 +92,16 @@ function create_charts(choose_data){
         value: meta_choice.wfreq,
         title: { text: "Belly Button Weekly Washing Frequency"},
         type: "indicator",
-        mode: "guage+number"
+        mode: "guage+number",
+        gauge: { 
+          axis: { range: [null, 9]},
+          steps: [
+            {range: [null, 3], color: "red" },
+            {range: [3, 6], color: "yellow"},
+            {range: [6,9], color: "green"}
+          ]
+                 
+        }
 
       }
     ];
