@@ -8,6 +8,25 @@ d3.json("samples.json").then((data)=> {
         // create_charts(data.names[0])
 });
 
+// function to create charts
+function create_charts(choose_data){
+    d3.json("samples.json").then((data)=> {
+        user_choice = data.samples.filter(sample=> sample.id == choose_data)
+        user_choice = user_choice[0]    
+        console.log(user_choice)
+    
+    // basic horizontal bar chart
+    var hbar_data = [{
+        type: 'bar',
+        x: [sample_values],
+        y: [otu_ids],
+        orientation: 'h',
+        text: [otu_labels]
+//   }];    
+    })
+}
+
+
 // basic horizontal bar chart
 // var data = [{
 //     type: 'bar',
@@ -67,3 +86,7 @@ d3.json("samples.json").then((data)=> {
 // var layout = {showlegend: false};
   
 // Plotly.newPlot('myDiv', data, layout);
+function changeOption(select_data){
+  console.lot(select_data)
+
+}
