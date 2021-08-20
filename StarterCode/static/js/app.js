@@ -1,8 +1,11 @@
-// get json file & console log it
+// get json file & console log it; populate dropdown list
 d3.json("samples.json").then((data)=> {
-    // dropdown=d3.select("#selDataset")
-    console.log(data);
-// data.names.forEach(element=> ())
+    dropdown=d3.select("#selDataset")
+        console.log(data);
+    data.names.forEach(element=> {
+        dropdown.append("option").text(element).property("value",element)
+    });
+        // create_charts(data.names[0])
 });
 
 // basic horizontal bar chart
@@ -60,8 +63,7 @@ d3.json("samples.json").then((data)=> {
 //     type: 'scatter'
 //   };
   
-  // var data = [trace1, trace2, trace3];
+// var data = [trace1, trace2, trace3];
+// var layout = {showlegend: false};
   
-  // var layout = {showlegend: false};
-  
-  // Plotly.newPlot('myDiv', data, layout);
+// Plotly.newPlot('myDiv', data, layout);
