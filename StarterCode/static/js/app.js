@@ -57,33 +57,30 @@ function create_charts(choose_data){
       [meta_choice.id, meta_choice.ethnicity, meta_choice.gender, meta_choice.age, 
         meta_choice.location, meta_choice.bbtype, meta_choice.wfreq]
     ]
+    console.log(values)
     var demog_data = [
       {
         type: "table",
-        // header: {
-        //     values: ["Key", "Value"],
-        //     align: "center",
-        //     line: {width: 1, color: 'black'},
-        //     fill: {color: "lightblue"},
-        //     font: {family: "Ariel", size: 12, color: "black"}
-        //   },
+        header: {
+            values: ["Key", "Value"],
+            align: "center",
+            line: {width: 1, color: 'black'},
+            fill: {color: "lightblue"},
+            font: {family: "Ariel", size: 12, color: "black"}
+          },
         cells: {
           values: values,
           align: "center",
-          line: {color: "black", width: 1}
+          line: {color: "black", width: 1},
+          font: {family: "Arial", size: 11, color: ["black"]}
           }
         
       }
     ];
+    console.log(demog_data)
 
     Plotly.newPlot("sample-metadata", demog_data)
 
-
-    // (user_choice.metadata.id)
-    // //     console.log(demographics);
-    //     user_choice = data.samples.filter(sample=> sample.id == choose_data)
-    //   user_choice = user_choice[0]    
-    //   console.log(user_choice)
 
     // washing gauge
     var gauge_data = [
@@ -114,16 +111,6 @@ function create_charts(choose_data){
 
 }
 
-
-
-    // var table_data = [
-    //   {type: "table",
-    // //   header: {d3.keys(user_choice.metadata[0])}
-
-      // }
-    // ]
-
-  
 
 
 
