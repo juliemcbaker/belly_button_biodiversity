@@ -66,13 +66,13 @@ function create_charts(choose_data){
             align: "center",
             line: {width: 1, color: 'black'},
             fill: {color: "lightblue"},
-            font: {family: "Ariel", size: 12, color: "black"}
+            font: {family: "Ariel", size: 120, color: "black"}
           },
         cells: {
           values: values,
           align: "center",
           line: {color: "black", width: 1},
-          font: {family: "Arial", size: 11, color: ["black"]}
+          font: {family: "Arial", size: 110, color: ["black"]}
           }
         
       }
