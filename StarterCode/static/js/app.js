@@ -52,34 +52,43 @@ function create_charts(choose_data){
     Plotly.newPlot("bubble", bubble_data, bubble_layout)
 
     // demographics table 
-    var values = [
-      ['id', 'ethnicity', 'gender', 'age', 'location', 'bbtype', 'washfreq'],
-      [meta_choice.id, meta_choice.ethnicity, meta_choice.gender, meta_choice.age, 
-        meta_choice.location, meta_choice.bbtype, meta_choice.wfreq]
-    ]
-    console.log(values)
-    var demog_data = [
-      {
-        type: "table",
-        header: {
-            values: ["Key", "Value"],
-            align: "center",
-            line: {width: 1, color: 'black'},
-            fill: {color: "lightblue"},
-            font: {family: "Ariel", size: 120, color: "black"}
-          },
-        cells: {
-          values: values,
-          align: "center",
-          line: {color: "black", width: 1},
-          font: {family: "Arial", size: 110, color: ["black"]}
-          }
-        
-      }
-    ];
-    console.log(demog_data)
+    // var values = [
+    //   ['id', 'ethnicity', 'gender', 'age', 'location', 'bbtype', 'washfreq'],
+    //   [meta_choice.id, meta_choice.ethnicity, meta_choice.gender, meta_choice.age, 
+    //     meta_choice.location, meta_choice.bbtype, meta_choice.wfreq]
+    // ]
+    // console.log(values)
+    
+    // put metadata into the pre-assigned panel
+    var PANEL = d3.select("#sample-metadata");
+    // clear existing metadata from the panel
+    PANEL.html("");
+    Object.entries(meta_choice).forEach(([key, value]) => {PANEL.append("h6").text(`${key}: ${value}`);
+  })
 
-    Plotly.newPlot("sample-metadata", demog_data)
+    
+    // var demog_data = [
+    //   {
+    //     type: "table",
+    //     header: {
+    //         values: ["Key", "Value"],
+    //         align: "center",
+    //         line: {width: 1, color: 'black'},
+    //         fill: {color: "lightblue"},
+    //         font: {family: "Ariel", size: 120, color: "black"}
+    //       },
+    //     cells: {
+    //       values: values,
+    //       align: "center",
+    //       line: {color: "black", width: 1},
+    //       font: {family: "Arial", size: 110, color: ["black"]}
+    //       }
+        
+    //   }
+    // ];
+    // console.log(demog_data)
+
+    // Plotly.newPlot("sample-metadata", demog_data)
 
 
     // washing gauge
