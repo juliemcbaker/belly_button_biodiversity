@@ -1,4 +1,4 @@
-# belly_button_biodiversity
+belly_button_biodiversity
 ============================
 Belly Button Biodiversity Analyses: https://juliemcbaker.github.io/belly_button_biodiversity/
 
@@ -27,6 +27,6 @@ When you are ready to view a new subject, just use the dropdown menu to choose a
 [1]: https://github.com/juliemcbaker/belly_button_biodiversity/blob/master/images/initialization_page.png
 [2]: https://github.com/juliemcbaker/belly_button_biodiversity/blob/master/images/choose_subject.png
 [3]: https://github.com/juliemcbaker/belly_button_biodiversity/blob/master/images/report_pt1.png
-[4]: https://github.com/juliemcbaker/belly_button_biodiversity/blob/master/images/report_pt2.png
+[4]: https://github.com/juliemcbaker/belly_button_biodiversity/blob/master/images/dashboard_pt2.png
 [5]: https://github.com/juliemcbaker/belly_button_biodiversity/blob/master/images/choose_next.png
-[6]: (http://robdunnlab.com/projects/belly-button-biodiversity/)
+[6]: http://robdunnlab.com/projects/belly-button-biodiversity/
