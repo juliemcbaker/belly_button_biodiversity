@@ -16,11 +16,11 @@ When first visiting the site, you must choose a subject number to see the indivi
 ![Image][1]
 Use the drop down to choose the data you wish to view. 
 ![Image][2]
-
+-----------------------------------------
 Your data should be displayed on the dashboard.
 ![Image][3]
 ![Image][4]
-
+-----------------------------------------
 When you are ready to view a new subject, just use the dropdown menu to choose a new individual
 ![Image][5]
 
