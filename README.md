@@ -5,7 +5,7 @@ This website takes data from the Belly Button Biodiversity dataset (http://robdu
 
 When first visiting the site, you must choose a subject number to see the individual's data.
 ![Image][1] 
-
+![Image][2]
 
 
 
@@ -16,3 +16,5 @@ When first visiting the site, you must choose a subject number to see the indivi
 
 
 [1]: https://github.com/juliemcbaker/belly_button_biodiversity/blob/master/images/initialization_page.png
+[2]: https://github.com/juliemcbaker/belly_button_biodiversity/blob/master/images/select_subject.png
+
