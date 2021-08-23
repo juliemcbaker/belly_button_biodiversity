@@ -1,5 +1,5 @@
 # belly_button_biodiversity
-[Link]: https://juliemcbaker.github.io/belly_button_biodiversity/
+[Link][1]: https://juliemcbaker.github.io/belly_button_biodiversity/
 
 
 
