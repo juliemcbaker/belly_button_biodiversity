@@ -67,28 +67,6 @@ function create_charts(choose_data){
   })
 
     
-    // var demog_data = [
-    //   {
-    //     type: "table",
-    //     header: {
-    //         values: ["Key", "Value"],
-    //         align: "center",
-    //         line: {width: 1, color: 'black'},
-    //         fill: {color: "lightblue"},
-    //         font: {family: "Ariel", size: 120, color: "black"}
-    //       },
-    //     cells: {
-    //       values: values,
-    //       align: "center",
-    //       line: {color: "black", width: 1},
-    //       font: {family: "Arial", size: 110, color: ["black"]}
-    //       }
-        
-    //   }
-    // ];
-    // console.log(demog_data)
-
-    // Plotly.newPlot("sample-metadata", demog_data)
 
 
     // washing gauge
@@ -98,11 +76,12 @@ function create_charts(choose_data){
         value: meta_choice.wfreq,
         title: { text: "Belly Button Weekly Washing Frequency"},
         type: "indicator",
-        mode: "guage+number",
+        mode: "gauge+number",
         gauge: { 
           axis: { range: [null, 9]},
+          bar: { color: "darkblue" },
           steps: [
-            {range: [null, 3], color: "red" },
+            {range: [0, 3], color: "red" },
             {range: [3, 6], color: "yellow"},
             {range: [6,9], color: "green"}
           ]
