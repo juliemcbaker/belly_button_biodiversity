@@ -2,9 +2,9 @@ belly_button_biodiversity
 ============================
 Belly Button Biodiversity Analyses: https://juliemcbaker.github.io/belly_button_biodiversity/
 
-This website takes data from the Belly Button Biodiversity dataset [Link][6] and uses Plot.ly to visualize key indicators for each subject in the study. 
+This website takes data from the Belly Button Biodiversity dataset [Link][6] which sampled microorganisms from belly buttons of willing subjects and asked a few demographic questions.
 
-Values returned include: 
+Values returned include (figures were graphed using Plot.ly): 
 1. table of demographic information
 2. bar graph of the top 10 Operational Taxonomic Units  (i.e., most plentiful microorganisms) for each subject
 3. gauge that indicates how frequently the subject washes their belly button weekly
