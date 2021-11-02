@@ -4,7 +4,8 @@ d3.json("samples.json").then((data)=> {
         console.log(data);
     data.names.forEach(element=> {
         dropdown.append("option").text(element).property("value",element)
-    });        
+    });
+    create_charts(data.names[0])
 });
 
 // function to create charts
