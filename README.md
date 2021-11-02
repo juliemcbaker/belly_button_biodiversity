@@ -1,6 +1,6 @@
-belly_button_biodiversity
+microbiome_biodiversity_dashboard
 ============================
-Belly Button Biodiversity Analyses: https://juliemcbaker.github.io/belly_button_biodiversity/
+Belly Button Biodiversity Analyses: https://juliemcbaker.github.io/microbiome_biodiversity_dashboard/
 
 This website takes data from the Belly Button Biodiversity dataset [Link][6] which sampled microorganisms from belly buttons of willing subjects and asked a few demographic questions.
 
