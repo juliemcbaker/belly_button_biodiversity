@@ -5,7 +5,7 @@ d3.json("samples.json").then((data)=> {
     data.names.forEach(element=> {
         dropdown.append("option").text(element).property("value",element)
     });
-    create_charts(data.names[0])
+    
 });
 
 // function to create charts
@@ -102,8 +102,6 @@ function create_charts(choose_data){
 
 
 // initializes on open
-function whenOpened(){
-    console.log("initializing...")
     create_charts(data.names[0])
 }; 
 
