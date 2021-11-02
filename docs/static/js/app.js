@@ -112,5 +112,5 @@ function optionChanged(choose_data){
 // initializes on open
 function whenOpened(){
     console.log("initializing...")
-    create_charts(data.samples[0])
+    create_charts(data.names[0])
 };    
