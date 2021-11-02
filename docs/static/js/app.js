@@ -100,7 +100,11 @@ function create_charts(choose_data){
 }
 
 
-
+// initializes on open
+function whenOpened(){
+    console.log("initializing...")
+    create_charts(data.names[0])
+}; 
 
 // updates things when something is chosen
 
@@ -109,8 +113,4 @@ function optionChanged(choose_data){
   create_charts(choose_data)
 };
 
-// initializes on open
-function whenOpened(){
-    console.log("initializing...")
-    create_charts(data.names[0])
-};    
+   
