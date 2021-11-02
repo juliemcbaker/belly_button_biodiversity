@@ -107,10 +107,10 @@ function create_charts(choose_data){
 function optionChanged(choose_data){
   console.log(choose_data)
   create_charts(choose_data)
-}
+};
 
 // initializes on open
 function whenOpened(){
     console.log("initializing...")
-    create_charts
-}    
+    create_charts(data.samples[0])
+};    
